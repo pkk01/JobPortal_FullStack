@@ -1,0 +1,298 @@
+#container {
+    width: 100%;
+    height: 100%;
+}
+
+#header {
+    width: 100%;
+    height: 70px;
+    background: white;
+}
+#content {
+    width: 100%;
+    height: calc(100% - 110px);
+    /* background: #fdf4f1; */
+    background: lightcyan;
+}
+#footer {
+    width: 100%;
+    height: 40px;
+    background: white;
+}
+
+#header .logo {
+    width: 40px;
+    /* height is fixed already in header */
+
+    /* licence element */
+    position: relative;
+    top: 10px;
+    float: left;
+    margin-left: 15px;
+}
+#header .logoText {
+    position: relative;
+    top: 17px;
+    margin-left: 15px;
+    font-size: 17pt;
+    font-weight: bold;
+    float: left;
+}
+
+#header .logoText span {
+    color: #1494c3;
+}
+#header .signIcon {
+    width: 40px;
+    /* height is fixed already in header */
+
+    /* licence element */
+    position: relative;
+    top: 10px;
+    float: right;
+    margin-right: 15px;
+    cursor: pointer;
+}
+
+#header .signinText {
+    position: relative;
+    top: 22px;
+    margin-right: 10px;
+    font-size: 15pt;
+    /* font-weight: bold; */
+    float: right;
+    cursor: pointer;
+}
+
+#header .signinText:hover,
+.signIcon:hover + .signinText
+{
+    text-decoration: underline;
+}
+
+#footer .copyrightText {
+    position: relative;
+    top: 10px;
+    margin-left: 8px;
+    font-size: 12pt;
+    /* font-weight: ; */
+    float: left;
+    color: black;
+}
+#footer .socialMediaIcon {
+    width: 20px;
+    /* height is fixed already in header */
+
+    /* licence element */
+    position: relative;
+    top: 10px;
+    float: right;
+    margin-right: 12px;
+    cursor: pointer;
+}
+
+#content .text1 {
+    position: relative;
+    top: 30px;
+    margin-left: 25px;
+    font-weight: bold;
+    font-size: 18pt;
+    color: rgb(20,148,195);
+
+}
+
+#content .text2 {
+    position: relative;
+    top: 40px;
+    margin-left: 25px;
+    font-weight: bold;
+    font-size: 40pt;
+    /* color: blueviolet; */
+
+}
+#content .text3 {
+    position: relative;
+    top: 60px;
+    margin-left: 25px;
+    /* font-weight: bold; */
+    font-size: 20pt;
+    /* color: blueviolet; */
+}
+
+#content .searchBar {
+    position: relative;
+    top: 70px;
+    margin-left: 25px;
+    margin-top: 10px;
+    display: block;
+    border-radius: 15px;
+    background: white;
+    width: 600px;
+    height: 60px;
+    padding: 10px;
+}
+
+.searchBar .searchjobText {
+    width: 200px;
+    height: 40px;
+    padding-left: 30px;
+    font-size: 12px;
+    border: none;
+    /* border-radius: 5px; */
+    border-right: 1px solid black ;
+    background: url('/searchicon.png') no-repeat;
+    background-position: 0px center;
+    background-size: 40px 30px;
+
+}
+.searchBar .searchlocationText {
+    width: 150px;
+    height: 40px;
+    padding-left: 30px;
+    font-size: 12px;
+    border: none;
+    border-radius: 5px;
+    background: url('/location.png') no-repeat;
+    background-position: 0px center;
+    background-size: 30px 20px;
+}
+.searchBar .searchButton {
+    width: 180px;
+    height: 40px;
+    padding-left: 15px;
+    font-size: 12pt;
+    font-weight: bold;
+    color: white;
+    background: blueviolet;
+    border-radius: 15px;
+    cursor: pointer;
+}
+.searchBar .searchButton:hover {
+    background-color: #1494c3;
+}
+
+
+#popup {
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    position: fixed;
+    z-index: 999;
+    background: rgba(0, 0, 0, 0.5); 
+    display: none;
+}
+#popupWindow {
+    width: 400px;
+    height: 500px;
+    background-color: lightblue;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 15px;
+    
+}
+#popupHeader {
+    width: 100%;
+    height: 70px;
+    background: rgb(20,148,195);
+    text-align: center;
+    /* arrange vertically */
+    line-height: 60px;
+    font-size: 30px;
+    font-weight: bold;
+    color: white;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+#signin {
+    /* width: 100%; */
+    width: calc(100% - 10px);
+    height: calc(100% - 70px);
+    /* background: white; */
+    padding: 5px;
+}
+
+#signin .usernameLabel {
+    display: block;
+    /* top, right, bottom, left */
+    padding: 20px 0px 3px 0px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+}
+
+#signin input {
+    width: 90%;
+    height: 30px;
+    border: 1px solid #1494c3;
+    border-radius: 5px;
+}
+
+#signin .passwordLabel {
+    display: block;
+    /* top, right, bottom, left */
+    padding: 20px 0px 3px 0px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+}
+
+#signin .forgetpassword {
+    font-size: 14pt;
+    text-align: right;
+    padding: 20px 15px 13px 0px;
+    color: black;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+}
+
+#signin .forgetpassword label {
+    cursor: pointer;
+    color: blue;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+}
+#signin .forgetpassword label:hover {
+    color: blueviolet;
+}
+#signin .signinButton {
+    width: 100%;
+    height: 40px;
+    background: rgb(20,148,195);
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    font-size: 20px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+}
+
+#signin .signinButton:hover {
+    background-color: blueviolet;
+    color: white;
+}
+#signin .div1 {
+    width: 100%;
+    height: 40px;
+}
+#signin .div2 {
+    width: 100%;
+    font-size: 20pt;
+    text-align: center;
+    color: black;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+
+}
+#signin .div2 label {
+    color: blue;
+    cursor: pointer;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+}
+
+#signin .div2 label:hover {
+    color: blueviolet;
+}
+
+
