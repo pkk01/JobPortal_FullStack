@@ -180,16 +180,18 @@
     z-index: 999;
     background: rgba(0, 0, 0, 0.5); 
     display: none;
+    transition: cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 #popupWindow {
     width: 400px;
-    height: 500px;
+    height: 600px;
     background-color: lightblue;
     position: relative;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     border-radius: 15px;
+    
     
 }
 #popupHeader {
@@ -265,6 +267,7 @@
     font-size: 20px;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 
+
 }
 
 #signin .signinButton:hover {
@@ -295,4 +298,65 @@
     color: blueviolet;
 }
 
+#signup {
+    width: calc(100% - 10);
+    height: calc(100% - 70px);
+    padding: 5px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    display: none;
+    margin-left: 5px;
+}
+#signup label {
+    display: block;
+    /* top, right, bottom, left */
+    padding: 10px 0px 3px 0px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+#signup select {
+    width: 90%;
+    height: 37px;
+    border: 1px solid #1494c3;
+    border-radius: 5px;
+}
 
+
+#signup input {
+    width: 90%;
+    height: 30px;
+    border: 1px solid #1494c3;
+    border-radius: 5px;
+}
+
+
+#signup .signupButton {
+    width: 91%;
+    height: 40px;
+    background: rgb(20,148,195);
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    font-size: 20px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin-top: 10px;
+}
+#signup .signupButton:hover {
+    background-color: blueviolet;
+    color: white;
+}
+
+#signup div {
+    width: 100%;
+    font-size: 15pt;
+    margin-top: 12px;
+    text-align: center;
+}
+
+#signup div span {
+    font-size: 15pt;
+    color: blue;
+    cursor: pointer;
+}
+#signup div span:hover {
+    color: blueviolet;
+}

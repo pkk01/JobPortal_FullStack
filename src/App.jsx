@@ -5,12 +5,38 @@ class App extends Component {
     showSignin() {
         let popup = document.getElementById("popup");
         popup.style.display = "block";
+        let popupHeader = document.getElementById("popupHeader");
+        popupHeader.innerHTML="LOGIN";
+        let signin = document.getElementById("signin");
+        let signup = document.getElementById("signup");
+        signin.style.display = "block";
+        signup.style.display = "none";
     }
+
+    showSignUp() {
+        let popup = document.getElementById("popup");
+        popup.style.display = "block";
+        let popupHeader = document.getElementById("popupHeader");
+        popupHeader.innerHTML="Register Now";
+        let signin = document.getElementById("signin");
+        let signup = document.getElementById("signup");
+        signin.style.display = "none";
+        signup.style.display = "block";
+        
+    }
+
+    closeSignIn(event) {
+        if (event.target.id == "popup") {
+            let popup = document.getElementById("popup");
+            popup.style.display = "none";
+        }
+    }
+
     render() {
         return (
             <div id='container'>
                 {/* logic for popup */}
-                <div id='popup'>
+                <div id='popup' onClick={this.closeSignIn}>
                     <div id='popupWindow'>
                         <div id='popupHeader'>
                             <label>LOGIN</label>
@@ -28,8 +54,30 @@ class App extends Component {
                             <div className='div1'></div>
                             <div className='div2'>
                                 Don't have an account? <br />
-                                <label > Sign Up Now</label>
+                                <label onClick={this.showSignUp}> SignUp Now</label>
                             </div>
+
+                        </div>
+
+                        <div id='signup'>
+                            <label>Full Name: </label>
+                            <input type="text" id='fullname' />
+
+                            <label >Email: </label>
+                            <input type="text" id='email' />
+                            <label id='roleText'>Select Role: </label>
+                            <select id="role">
+                                <option value="">select option</option>
+                                <option value="1">Admin</option>
+                                <option value="2">Employeer</option>
+                                <option value="3">Job Seeker</option>
+                            </select>
+                            <label >Password: </label>
+                            <input type="password" id='password' />
+                            <label >Confirm Password: </label>
+                            <input type="password" id='confirmPassword' />
+                            <button className='signupButton'>Register</button>
+                            <div> Already have an Account? <span onClick={this.showSignin}>SignIn</span></div>
 
                         </div>
                     </div>
@@ -62,6 +110,5 @@ class App extends Component {
         );
     }
 }
-
 
 export default App;
